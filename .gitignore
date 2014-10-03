@@ -1,0 +1,13 @@
+\#*
+ctags-5.8
+**/*.log
+edts/
+tern/
+.emacs/textmate/
+*.xref
+*.deb
+*.deb.*
+xmonad.o
+xmonad.errors
+xmonad.hi
+xmonad-*

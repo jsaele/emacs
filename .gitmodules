@@ -1,0 +1,7 @@
+[submodule "tern"]
+	path = tern
+	url = git://github.com/marijnh/tern.git
+
+[submodule "textmate"]
+	path = .emacs.d/textmate
+	url = git://github.com/defunkt/textmate.el.git
