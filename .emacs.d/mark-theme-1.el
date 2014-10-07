@@ -78,27 +78,27 @@
 
 ;; Get screen DPI
 ;; (actually, dots per decimeter)
-(defun x11-dpdm ()
-  (let ((xrandr
-         (with-output-to-string
-           (call-process "xrandr" nil standard-output))))
-    (string-match "\\(.+\\) connected primary \\(.+\\)x.+ (.+) \\(.+\\)mm x .+mm" xrandr)
-    (when (not (match-string 2 xrandr))
-      (string-match "\\(.+\\) connected \\(.+\\)x.+ (.+) \\(.+\\)mm x .+mm" xrandr))
-    (if (match-string 2 xrandr)
-        (let ((pixels (string-to-number (match-string 2 xrandr)))
-              (phys (string-to-number (match-string 3 xrandr))))
-          (/ (* pixels 100) phys))
-      250)))
+;;;(defun x11-dpdm ()
+;;;  (let ((xrandr
+;;;         (with-output-to-string
+;;;           (call-process "xrandr" nil standard-output))))
+;;;    (string-match "\\(.+\\) connected primary \\(.+\\)x.+ (.+) \\(.+\\)mm x .+mm" xrandr)
+;;;    (when (not (match-string 2 xrandr))
+;;;      (string-match "\\(.+\\) connected \\(.+\\)x.+ (.+) \\(.+\\)mm x .+mm" xrandr))
+;;;    (if (match-string 2 xrandr)
+;;;        (let ((pixels (string-to-number (match-string 2 xrandr)))
+;;;              (phys (string-to-number (match-string 3 xrandr))))
+;;;          (/ (* pixels 100) phys))
+;;;      250)))
 
-(defun scale-font-size (font-size)
-  (let ((target-dpi 480))
-    (/ (* font-size (+ target-dpi (/ (- (x11-dpdm) target-dpi) 4))) target-dpi)))
+;;;(defun scale-font-size (font-size)
+;;;  (let ((target-dpi 480))
+;;;    (/ (* font-size (+ target-dpi (/ (- (x11-dpdm) target-dpi) 4))) target-dpi)))
 
 ;; Calculate default font size
-(setq default-frame-font-size (scale-font-size 18))
-(setq presentation-frame-font-size
-      (truncate (* 1.25 default-frame-font-size)))
+;;;(setq default-frame-font-size (scale-font-size 18))
+;;;(setq presentation-frame-font-size
+;;;      (truncate (* 1.25 default-frame-font-size)))
 
 ;; Build font descriptor strings
 (defun font-desc (name size)
@@ -110,11 +110,11 @@
 ;;  (font-desc "Inconsolata for Powerline" default-frame-font-size))
 ;;(defun presentation-frame-font ()
 ;;  (font-desc "Inconsolata for Powerline" presentation-frame-font-size))
-(defun default-frame-font ()
-  (font-desc "Inconsolata" default-frame-font-size))
-(defun presentation-frame-font ()
-  (font-desc "Inconsolata" presentation-frame-font-size))
-(set-frame-font (default-frame-font))
+;;(defun default-frame-font ()
+  ;;(font-desc "Inconsolata" default-frame-font-size))
+;;(defun presentation-frame-font ()
+  ;;(font-desc "Inconsolata" presentation-frame-font-size))
+;;(set-frame-font (default-frame-font))
 
 (defun toggle-presentation-mode ()
   (interactive)
@@ -139,8 +139,8 @@
 (global-set-key (kbd "C-M-?") 'presentation-mode-decrease-font-size)
 
 ;; Unclutter the modeline
-(package-require 'diminish)
-(eval-after-load "yasnippet" '(diminish 'yas-minor-mode))
+;;(package-require 'diminish)
+;;(eval-after-load "yasnippet" '(diminish 'yas-minor-mode))
 (eval-after-load "ethan-wspace" '(diminish 'ethan-wspace-mode))
 (eval-after-load "eldoc" '(diminish 'eldoc-mode))
 (eval-after-load "rainbow-mode" '(diminish 'rainbow-mode))
@@ -148,7 +148,7 @@
 (eval-after-load "autopair" '(diminish 'autopair-mode))
 (eval-after-load "abbrev" '(diminish 'abbrev-mode))
 (eval-after-load "auto-complete" '(diminish 'auto-complete-mode))
-(eval-after-load "js2-highlight-vars" '(diminish 'js2-highlight-vars-mode))
+;;(eval-after-load "js2-highlight-vars" '(diminish 'js2-highlight-vars-mode))
 (eval-after-load "projectile" '(diminish 'projectile-mode))
 (eval-after-load "mmm-mode" '(diminish 'mmm-mode))
 (eval-after-load "skewer-html" '(diminish 'skewer-html-mode))

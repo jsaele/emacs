@@ -60,11 +60,11 @@
         mark-dired
         mark-project
         mark-ido
-        mark-theme-1
         mark-c
         mark-js
         mark-textmate
         mark-whitespace
+        mark-theme-1
         ))
 
 ;; Now load other things
