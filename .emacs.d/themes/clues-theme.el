@@ -89,9 +89,9 @@
  '(default
    (
     (((class color) (min-colors 16777216)) (:foreground "#C0E9F6" :background "#110B14"))
-    (((class color) (min-colors 88))       (:foreground "#fff" :background "#000"))
-    (((class color) (min-colors 16))       (:foreground "#fff" :background "#000"))
-    (((class color) (min-colors 8))        (:foreground "#fff" :background "#000")))
+    (((class color) (min-colors 88))       (:foreground "#fff" :background "#333"))
+    (((class color) (min-colors 16))       (:foreground "#fff" :background "#333"))
+    (((class color) (min-colors 8))        (:foreground "#fff" :background "#333")))
    )
  '(linum                               ((t (:foreground "#6a6a6a"  :background "#110B14" :height 96                                    ))))
  '(minibuffer-prompt                   ((t (:foreground "#1278A8"  :background nil       :weight bold                                  ))))

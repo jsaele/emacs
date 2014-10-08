@@ -139,7 +139,7 @@
 (global-set-key (kbd "C-M-?") 'presentation-mode-decrease-font-size)
 
 ;; Unclutter the modeline
-;;(package-require 'diminish)
+(package-require 'diminish)
 ;;(eval-after-load "yasnippet" '(diminish 'yas-minor-mode))
 (eval-after-load "ethan-wspace" '(diminish 'ethan-wspace-mode))
 (eval-after-load "eldoc" '(diminish 'eldoc-mode))
