@@ -41,7 +41,6 @@
 ;(require 'expand-region)
 ;(global-set-key (kbd "C-=") 'er/expand-region)
 
-
 (defadvice zap-to-char (after my-zap-to-char-advice (arg char) activate)
   "Kill up to the ARG'th occurence of CHAR, and leave CHAR.
   The CHAR is replaced and the point is put before CHAR."
@@ -65,6 +64,7 @@
         mark-textmate
         mark-whitespace
         mark-theme-1
+        joakim-tern
         ))
 
 ;; Now load other things
