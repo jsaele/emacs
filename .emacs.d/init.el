@@ -9,6 +9,21 @@
 (setq confirm-nonexistent-file-or-buffer 1)
 ;;(setq ns-right-option-modifier 'super)
 
+
+;;
+;; Osx Settings
+;;
+(setq mac-option-modifier nil
+      mac-command-modifier 'meta
+      x-select-enable-clipboard t)
+
+
+;;
+;; Open emacs in windowed mode
+;;
+(setq ns-pop-up-frames nil)
+
+
 ;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -28,18 +43,6 @@
 ;; Write backup files to own directory
 (setq backup-directory-alist
       `(("." . ,(expand-file-name (concat dotfiles-dir "bak")))))
-
-;(add-to-list 'load-path "~/dev/emacs")
-;(add-to-list 'load-path "~/dev/emacs/color-theme")
-;(add-to-list 'load-path "~/dev/emacs/expand-region.el")
-
-
-;(require 'multi-term)
-;(require 'ace-jump-mode)
-;(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-
-;(require 'expand-region)
-;(global-set-key (kbd "C-=") 'er/expand-region)
 
 (defadvice zap-to-char (after my-zap-to-char-advice (arg char) activate)
   "Kill up to the ARG'th occurence of CHAR, and leave CHAR.
@@ -64,7 +67,7 @@
         mark-textmate
         mark-whitespace
         mark-theme-1
-        joakim-tern
+        elpa/tern-auto-complete
         ))
 
 ;; Now load other things

@@ -1,7 +1,7 @@
 
 pwd
 
-sudo chown -R marknijhof:admin /usr/local
+sudo chown -R joakim:admin /usr/local
 
 ln -s "$PWD/.emacs.d/" ~/.emacs.d
 ln -s "$PWD/terminal/.inputrc" ~/.inputrc
