@@ -34,6 +34,7 @@
 (setq coding-system-for-write 'utf-8)
 (prefer-coding-system 'utf-8)
 (load-library "iso-transl")
+;;(set-language-environment 'English) doesnt work :(
 
 ;; Add .emacs.d to load-path
 (setq dotfiles-dir (file-name-directory
@@ -67,7 +68,7 @@
         mark-textmate
         mark-whitespace
         mark-theme-1
-        elpa/tern-auto-complete
+	mark-web-mode
         ))
 
 ;; Now load other things
