@@ -21,7 +21,7 @@
 ;;
 ;; Open emacs in windowed mode
 ;;
-(setq ns-pop-up-frames nil)
+;;(setq ns-pop-up-frames nil)
 
 
 ;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
@@ -34,7 +34,7 @@
 (setq coding-system-for-write 'utf-8)
 (prefer-coding-system 'utf-8)
 (load-library "iso-transl")
-;;(set-language-environment 'English) doesnt work :(
+;; UTF-8 end
 
 ;; Add .emacs.d to load-path
 (setq dotfiles-dir (file-name-directory
@@ -60,15 +60,10 @@
 (setq mark-pkg-full
       '(
         mark-package
-        mark-dired
-        mark-project
         mark-ido
-        mark-c
-        mark-js
-        mark-textmate
         mark-whitespace
         mark-theme-1
-	mark-web-mode
+        mark-web-mode
         ))
 
 ;; Now load other things
