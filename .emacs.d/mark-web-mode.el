@@ -20,19 +20,16 @@
 )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
-(setq web-mode-extra-auto-pairs
-      '(("js"  . (("{" "}")))
-        ("php"  . (("open" "close")
-                   ("open" "close")))
-       ))
-
-(setq web-mode-enable-auto-pairing t)
-
 ;; Enable tern-mode for js2-mode
 (add-to-list 'load-path "~/system/tern/emacs/")
 (autoload 'tern-mode "tern" nil t)
 (add-hook 'web-mode-hook (lambda () (tern-mode t)))
 (add-hook 'web-mode-hook '(lambda() (setq indent-tabs-mode nil)))
 (add-hook 'web-mode-hook (lambda () (add-to-list 'write-file-functions 'delete-trailing-whitespace)))
-
+(add-hook 'web-mode-hook (lambda () (setq web-mode-enable-auto-pairing t)))
+(add-hook 'web-mode-hook (lambda () (setq web-mode-extra-auto-pairs
+      '(("js"  . (("{" "}")))
+        ("php"  . (("open" "close")
+                   ("open" "close")))
+       ))))
 (provide 'mark-web-mode)
